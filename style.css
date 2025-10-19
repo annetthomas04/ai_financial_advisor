@@ -1,0 +1,119 @@
+/* -------- Global Styling -------- */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(120deg, #387852, #2e5130, #77c37c, #158e26);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.app-container {
+  width: 90%;
+  max-width: 700px;
+  height: 80vh;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(16px);
+  border-radius: 24px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* -------- Header -------- */
+.header {
+  text-align: center;
+  padding: 20px;
+  color: #222;
+}
+
+.header h1 {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.header p {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+/* -------- Chat Container -------- */
+.chat-container {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  scroll-behavior: smooth;
+}
+
+/* -------- Message Bubbles -------- */
+.bot-message,
+.user-message {
+  max-width: 80%;
+  padding: 12px 16px;
+  border-radius: 16px;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  white-space: pre-wrap;
+}
+
+.bot-message {
+  align-self: flex-start;
+  background: rgba(255, 255, 255, 0.8);
+  color: #333;
+  border-top-left-radius: 0;
+}
+
+.user-message {
+  align-self: flex-end;
+  background: #222;
+  color: #fff;
+  border-top-right-radius: 0;
+}
+
+/* -------- Input Box -------- */
+.input-container {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+}
+
+#userInput {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  padding: 10px 15px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+#sendBtn {
+  background: linear-gradient(135deg, #ff6a88, #ff99ac);
+  border: none;
+  color: white;
+  font-size: 1.3rem;
+  margin-left: 10px;
+  border-radius: 50%;
+  padding: 10px 14px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+#sendBtn:hover {
+  transform: scale(1.1);
+}
